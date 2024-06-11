@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: #333;
+
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: #FF4500;
+}
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+    padding: 20px 100px;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo .bx {
+    font-size: 24px;
+    color: blue;
+}
+
+.navbar {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: blue;
+    text-decoration: none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000001;
+    display: none;
+}
+header.scrolled {
+  background: black;
+ 
+}
+.navbar.active {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  row-gap: 1.2rem;
+  
+
+}
+
+.btn {
+    padding: 0.7rem 1.4rem;
+    background: orangered;
+    color: white;
+    font-weight: 400;
+    border-radius: 0.5rem;
+}
+
+section#home {
+    margin-top: -15px; /* Adjust for fixed header */
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: calc(100vh - 80px); /* Full viewport height minus header height */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.home-text {
+  position: absolute;
+  top: 50%;
+  left: 5%; /* Align to the left with some padding */
+  transform: translateY(-50%);
+  text-align: left;
+  color: white;
+}
+
+.swiper-pagination-bullet {
+    background: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 50px;
+    }
+    .swiper {
+        height: calc(100vh - 60px); /* Adjust for smaller header height on mobile */
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    .navbar {
+        
+    display: none;
+    
+
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 10px 20px;
+    }
+    .swiper {
+        height: calc(100vh - 50px); /* Adjust for smaller header height on mobile */
+    }
+    .logo {
+        font-size: 0.9rem;
+    }
+    .menu-icon {
+      display: block;
+  }
+  .navbar {
+        
+    display: none;
+    
+
+    }
+}
+.heading1{
+    padding: 1.6rem;
+    max-width: 986px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid orangered; 
+}
+.movie-container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.row {
+    display: contents; /* Ensure the row uses the grid layout from the container */
+}
+
+.col {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.4s all linear;
+}
+.image-container img:hover{
+    transform: translateY(-5px);
+   
+}
+.img-btn {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    
+}
+
+
+
+.col h3 {
+    margin: 0.5rem 0;
+}
+
+.col span {
+    color: #666;
+}
+
+.col h3 {
+    margin: 0.5rem 0;
+}
+
+.col span {
+    color: #666;
+}
+.footer-newsletter {
+    background-color: #FF4500; /* Orange-red background */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    max-width: 986px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-newsletter .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.footer-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-paragraph {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-form input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    width: 300px;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+.footer-form .btn {
+    padding: 0.5rem 1rem;
+    background-color: #333; /* Dark background for the button */
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.footer-form .btn:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
